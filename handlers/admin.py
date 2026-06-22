@@ -30,6 +30,7 @@ ADMIN_ID = 7100531076,8935105840,7448760922
 @router.message(F.text == "Admin0")
 @router.message(Command("admin"))
 async def open_admin_panel(message: Message):
+    await state.clear()
     if message.from_user.id not in ADMIN_ID:
         await message.answer("⚠️ عذراً، هذا الأمر مخصص لإدارة البوت فقط.")
         return
