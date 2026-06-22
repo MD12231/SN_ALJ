@@ -108,9 +108,11 @@ async def process_deposit_amount(message: Message, state: FSMContext, bot: Bot):
         amount = float(message.text.strip())
         if amount <= 0:
             await message.answer("⚠️ يجب أن يكون المبلغ أكبر من الصفر!\nأعد إدخال المبلغ:")
+            await state.clear()
             return
     except ValueError:
         await message.answer("⚠️ عذراً، يجب إرسال المبلغ كأرقام فقط!\nأعد إدخال المبلغ:")
+        await state.clear()
         return
 
     user_data = await state.get_data()
