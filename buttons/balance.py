@@ -63,7 +63,7 @@ async def deposit_sham_cash(message: Message, state: FSMContext):
 
 
 # 🔁 شحن USDT TRC20
-@router.message(F.text == "🪙 شحن عن طريق USDT TRC20")
+@router.message(F.text == "شحن رصيد عن طريق usdt trc20")
 async def deposit_usdt_trc20(message: Message, state: FSMContext):
     await state.update_data(method="USDT TRC20")
     
@@ -78,7 +78,7 @@ async def deposit_usdt_trc20(message: Message, state: FSMContext):
 
 
 # 🔁 شحن USDT BEP20
-@router.message(F.text == "🪙 شحن عن طريق USDT BEP20")
+@router.message(F.text == "شحن رصيد عن طريق usdt pep20")
 async def deposit_usdt_bep20(message: Message, state: FSMContext):
     await state.update_data(method="USDT BEP20")
     
