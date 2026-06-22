@@ -54,7 +54,7 @@ async def deposit_sham_cash(message: Message, state: FSMContext):
     
     instructions = (
         "🇸🇾 <b>الشحن عبر شام كاش:</b>\n\n"
-        "📱 يرجى التحويل إلى الرقم التالي: <code>09xxxxxxxx</code>\n"
+        "📱 يرجى التحويل إلى الكود التالي: <code>920328c12c97b30bbde4d5af415d11b2</code>\n"
         "📝 بعد إتمام التحويل بنجاح، أرسل لي <b>رقم العملية أو كود التحويل</b> هنا:"
     )
     # نقوم بإرسال رسالة عادية لإخفاء الكيبورد حتى يكتب المستخدم براحته
@@ -69,7 +69,7 @@ async def deposit_usdt_trc20(message: Message, state: FSMContext):
     
     instructions = (
         "🪙 <b>الشحن عبر USDT (TRC-20):</b>\n\n"
-        "💳 عنوان المحفظة:\n<code>TYxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>\n\n"
+        "💳 عنوان المحفظة:\n<code>TTieavhJZVUU8njifsQooMJYABgCnxACSX</code>\n\n"
         "⚠️ تأكد من اختيار شبكة <b>TRC20</b> لتفادي ضياع الأموال.\n"
         "📝 بعد التحويل، أرسل هنا <b>رقم العملية (TxID)</b>:"
     )
@@ -84,7 +84,7 @@ async def deposit_usdt_bep20(message: Message, state: FSMContext):
     
     instructions = (
         "🪙 <b>الشحن عبر USDT (BEP-20 / BNB Smart Chain):</b>\n\n"
-        "💳 عنوان المحفظة:\n<code>0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code>\n\n"
+        "💳 عنوان المحفظة:\n<code>0x76b345dE0251628532Ae31040E37F7c513306736</code>\n\n"
         "⚠️ تأكد من اختيار شبكة <b>BEP20</b> لتفادي ضياع الأموال.\n"
         "📝 بعد التحويل، أرسل هنا <b>رقم العملية (TxID)</b>:"
     )
