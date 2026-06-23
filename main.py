@@ -10,6 +10,15 @@ from aiogram.fsm.storage.memory import MemoryStorage
 # ضع التوكن الخاص ببوتك هنا
 BOT_TOKEN = "8779813513:AAGMiBb3wxRuRp3lCG8_esl0OluHbl4Kt38"
 
+async def setup_bot_commands(bot: Bot):
+    commands = [
+        BotCommand(command="start", description="تشغيل البوت"),
+        BotCommand(command="cancel", description="❌ إلغاء العملية الحالية والعودة")
+    ]
+    # تعيين الأوامر لجميع المستخدمين بشكل افتراضي
+    await bot.set_my_commands(commands=commands, scope=BotCommandScopeDefault())
+    print("✅ تم تعيين قائمة الأوامر (Menu) بنجاح.")
+
 async def main():
     logging.basicConfig(
         level=logging.INFO,
@@ -39,6 +48,9 @@ async def main():
     dp.include_router(admin.router)
 
     print("🤖 البوت يعمل الآن بنجاح (مقسم إلى ملفات)...")
+
+
+    await setup_bot_commands(bot)
     
     # بدء استقبال التحديثات وحذف التحديثات المعلقة القديمة
     await bot.delete_webhook(drop_pending_updates=True)
