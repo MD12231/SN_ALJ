@@ -1,6 +1,6 @@
 from aiogram import Router, F, Bot, BaseMiddleware
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, TelegramObject
-from aiogram.filters import CommandStart, CommandObject
+from aiogram.filters import CommandStart, CommandObject, Command
 # استيراد الكيبورد من الملف الأول
 from keyboard.reply import get_main_keyboard
 from typing import Callable, Dict, Any, Awaitable
