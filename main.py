@@ -1,5 +1,6 @@
 import asyncio
 from aiogram import Bot, Dispatcher
+from aiogram.types import BotCommand, BotCommandScopeDefault
 # استيراد الراوتر من ملف المعالجات
 from handlers import user
 from handlers import admin
